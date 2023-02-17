@@ -1,7 +1,7 @@
 
 resource "cloudflare_record" "terraform-test" {
   # required
-  zone_id = var.zone_id
+  zone_id = cloudflare_zone.terraform-cloudfeeling-com.id
   name    = "@"
   type    = "CNAME"
   # optional
